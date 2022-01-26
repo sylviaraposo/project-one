@@ -1,0 +1,131 @@
+img {
+    width: 100%;
+}
+// New Materials Section
+.new-materials {
+    .flex-container {
+        display: flex;
+        margin: 50px 0;
+        align-items: center;
+        justify-content: space-between;
+        .new-materials-text {
+            width: 60%;
+            padding: 40px 0;
+        }
+        .img-container {
+            box-shadow: -20px 20px $bright-yellow;
+        }
+        img {
+            display:block;
+        }
+    }
+}
+
+// Gallery Section
+.gallery {
+    background-color: $ice;
+    width:100%;
+    ul {
+        display: flex;
+        padding: 60px 0;
+        width:100%;
+        justify-content: space-between;
+        li {
+            width: calc((100% / 3) - 30px);
+        }
+    }
+}
+
+// Links Section
+.other-links {
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 0;
+        justify-content: space-between;
+        .link-container {
+            display:flex;
+            width: calc((100%/2) - 40px);
+            padding-bottom:20px;
+            .circle-icon  {
+                background-color: $bright-yellow;
+                border-radius: 50%;
+                padding: 8px;
+                margin-top: 5px;
+                margin-right: 15px;
+            }            
+        }
+    }
+}
+
+// Group Program Section
+.group-programs {
+    background-color: $ice;
+    .flex-container {
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 50px;
+    }
+    .img-container {
+        width: 40%;
+        position: relative;
+        bottom:50px;
+        box-shadow: 25px 25px $bright-yellow;
+        
+        img {
+            display:block;
+        }
+    }
+    .text-container {
+        width: 40%;
+        padding-right: 150px;        
+        margin-right: 60px;
+    }
+}
+
+// New Locations Section
+.new-locations {
+    background-color: $ice;
+    .flex-container {
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 50px;
+    }
+    .img-container {
+        width: 40%;
+        position: relative;
+        bottom:-50px;
+        box-shadow: 25px 25px $bright-yellow;
+        
+        img {
+            display:block;
+        }
+    }
+    .text-container {
+        width: 40%;
+        padding-left: 150px;        
+        margin-left: 60px;
+    }
+}
+
+
+// Banner image 
+.banner-image {
+    background-image: url(../assets/banner-image.jpg); 
+    height: 60vh;
+    background-size: cover;
+    background-position: bottom;
+}
+
+// Search by Style
+.search-by-style .flex-container {
+    padding: 110px 40px;
+    text-align: center;
+    p {
+        text-align: left;
+    }
+}

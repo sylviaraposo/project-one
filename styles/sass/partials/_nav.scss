@@ -1,0 +1,21 @@
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content:  flex-end;
+        padding-top: 30px;
+        padding-right: 100px;
+    }
+    li {
+        padding: 0 20px;
+        &:hover, 
+        &:focus-within {
+            text-underline-offset: 5px;
+            text-decoration: underline $bright-yellow 4px;
+        }
+    }
+
+}
