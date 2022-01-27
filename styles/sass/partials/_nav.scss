@@ -2,12 +2,19 @@
     position: sticky;
     top: 0;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    h2 {
+        width: 10%;
+        padding: 20px 0;
+    }
     ul {
         display: flex;
         flex-direction: row;
         justify-content:  flex-end;
-        padding-top: 30px;
-        padding-right: 100px;
+        // padding-top: 30px;
+        // padding-right: 100px;
     }
     li {
         padding: 0 20px;
@@ -16,6 +23,11 @@
             text-underline-offset: 5px;
             text-decoration: underline $bright-yellow 4px;
         }
+    }
+
+    // HIDE THE LOGO ON HOME PAGE
+    .home-logo {
+        opacity: 0;
     }
 
 }
