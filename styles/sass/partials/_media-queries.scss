@@ -53,6 +53,36 @@
             }
         }
     }
+
+
+    // CONTACT PAGE MEDIA QUERIES
+    .contact-header {
+        h1 {
+            text-align: center;
+            margin: 0 auto;
+            width: 50%;
+        }
+    }
+    .contact { 
+        .flex-container {
+            flex-direction: column;
+            .contact-form {
+                width: 100%;
+            }
+            .contact-flex {
+                text-align: center;
+                margin: 0 auto;
+                margin-top: -50px;
+                margin-bottom: 70px;
+                .social-media {
+                    margin:0 auto;
+                    i:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
     
 }
 
@@ -61,7 +91,17 @@
     header {
         margin-bottom: 0px;
         h1 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
+        }
+    }
+
+    // Contact Header
+    .contact-header {
+        h1 {
+            margin:0 auto;
+            margin-top:70px;
+            text-align: center;
+        width: 100%;
         }
     }
 
@@ -109,7 +149,8 @@
         }
     }
     }
-// Search By Style Section
+
+    // Search By Style Section
     .search-by-style .flex-container {
         padding: 50px;
         p {
@@ -121,5 +162,22 @@
     // shrink banner image to avoid taking up too much space
     .banner-image {
         height: 30vh;
+    }
+
+    // Contact Section
+    
+    .contact-form {
+        padding: 50px 35px;
+        padding-top:0px;
+        box-shadow: none;
+        
+        .top-row-contact {
+            display: block;
+            padding-top:0;
+            input {
+                width: 100%;
+                padding-top: 50px;
+            }
+        }
     }
 }

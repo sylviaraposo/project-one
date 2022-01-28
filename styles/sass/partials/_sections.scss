@@ -140,13 +140,17 @@ img {
 
 // CONTACT PAGE
 .contact {
+        
     background: $ice;
+    .wrapper {
+            max-width: 90%;
+    }
     .flex-container {
         display: flex;
+        justify-content: space-around;        
         .contact-flex {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
             height: 30%;
             margin-top:100px;
             p {
@@ -157,7 +161,10 @@ img {
             display:flex;
             color: $evergreen;
             i {
-                padding-right: 20px;
+                padding: 0 10px;
+                &:first-child {
+                    padding-left: 0;
+                }
             }
         }
     } 

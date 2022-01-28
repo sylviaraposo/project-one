@@ -246,11 +246,10 @@ html {
 
 .contact-form {
   background-color: #f5f5f5;
-  padding: 80px;
+  padding: 70px;
   position: relative;
   top: -150px;
-  right: 140px;
-  width: 75%;
+  width: 55%;
   box-shadow: 20px 20px #f8fb05;
 }
 .contact-form .top-row-contact {
@@ -470,10 +469,15 @@ header span {
 
 .contact-header {
   background-image: url(../assets/contact-image.jpg);
-  height: 60vh;
+  height: 70vh;
   background-size: cover;
   position: relative;
   z-index: 0;
+  margin-bottom: 0;
+}
+.contact-header h1 {
+  margin-top: 100px;
+  width: 85%;
 }
 .contact-header::after {
   background-image: none;
@@ -485,6 +489,9 @@ header span {
   background-size: cover;
   position: relative;
   z-index: 0;
+}
+.blog-header h1 {
+  margin-top: 100px;
 }
 .blog-header::after {
   background-image: none;
@@ -622,13 +629,16 @@ img {
 .contact {
   background: #e0fddf;
 }
+.contact .wrapper {
+  max-width: 90%;
+}
 .contact .flex-container {
   display: flex;
+  justify-content: space-around;
 }
 .contact .flex-container .contact-flex {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   height: 30%;
   margin-top: 100px;
 }
@@ -640,7 +650,10 @@ img {
   color: #065635;
 }
 .contact .flex-container .social-media i {
-  padding-right: 20px;
+  padding: 0 10px;
+}
+.contact .flex-container .social-media i:first-child {
+  padding-left: 0;
 }
 
 .full-content-flex {
@@ -769,13 +782,45 @@ footer p {
   .new-materials .flex-container .new-materials-text {
     padding: 60px;
   }
+
+  .contact-header h1 {
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .contact .flex-container {
+    flex-direction: column;
+  }
+  .contact .flex-container .contact-form {
+    width: 100%;
+  }
+  .contact .flex-container .contact-flex {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: -50px;
+    margin-bottom: 70px;
+  }
+  .contact .flex-container .contact-flex .social-media {
+    margin: 0 auto;
+  }
+  .contact .flex-container .contact-flex .social-media i:last-child {
+    padding-right: 0;
+  }
 }
 @media (max-width: 700px) {
   header {
     margin-bottom: 0px;
   }
   header h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+  }
+
+  .contact-header h1 {
+    margin: 0 auto;
+    margin-top: 70px;
+    text-align: center;
+    width: 100%;
   }
 
   .new-materials .flex-container {
@@ -830,5 +875,19 @@ footer p {
 
   .banner-image {
     height: 30vh;
+  }
+
+  .contact-form {
+    padding: 50px 35px;
+    padding-top: 0px;
+    box-shadow: none;
+  }
+  .contact-form .top-row-contact {
+    display: block;
+    padding-top: 0;
+  }
+  .contact-form .top-row-contact input {
+    width: 100%;
+    padding-top: 50px;
   }
 }
