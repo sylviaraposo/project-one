@@ -5,12 +5,12 @@ img {
 .new-materials {
     .flex-container {
         display: flex;
-        margin: 50px 0;
+        padding-top:60px;
         align-items: center;
         justify-content: space-between;
         .new-materials-text {
             width: 60%;
-            padding: 40px 0;
+            padding: 100px 0;
         }
         .img-container {
             box-shadow: -20px 20px $bright-yellow;
@@ -60,26 +60,34 @@ img {
 // Group Program Section
 .group-programs {
     background-color: $ice;
+    height: 40vh;
+    padding-top: 40px;
     .flex-container {
         display: flex;
         flex-direction:row;
         justify-content: space-between;
         align-items: center;
         padding-right: 50px;
+        position: relative;
+        padding-bottom:50px;
+        height:100%;
     }
     .img-container {
         width: 40%;
-        position: relative;
-        bottom:50px;
-        box-shadow: 25px 25px $bright-yellow;
+        box-shadow: 20px 20px $bright-yellow;
+        position: absolute;
+        top:-70px;
+        
         img {
             display:block;
         }
     }
     .text-container {
-        width: 40%;
-        padding-right: 150px;        
-        margin-right: 60px;
+        width: 35%;
+        bottom:0;
+        position:absolute;
+        right:50px;
+        top:70px;
     }
 }
 
@@ -91,21 +99,24 @@ img {
         flex-direction:row;
         justify-content: space-between;
         align-items: center;
-        padding-left: 50px;
+        position: relative;
+        height: 100%;
+        padding: 50px;
     }
     .img-container {
         width: 40%;
-        position: relative;
-        bottom:-50px;
-        box-shadow: 25px 25px $bright-yellow;
+        position: absolute;
+        right: 0;
+        bottom: -40px;
+        box-shadow: -20px 20px $bright-yellow;
         img {
             display:block;
         }
     }
     .text-container {
         width: 40%;
-        padding-left: 150px;        
-        margin-left: 60px;
+        text-align: right;
+        padding: 100px 0px 50px 30px;
     }
 }
 
@@ -165,7 +176,7 @@ img {
         position: relative;
         top: -110px;
         z-index: 5;
-        box-shadow: 25px 25px $bright-yellow;
+        box-shadow: 20px 20px $bright-yellow;
         .text-container {
             background-color: $solid-white;
             margin-top:20px;

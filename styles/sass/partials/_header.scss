@@ -5,6 +5,7 @@ header {
     height: 100vh;
     background-size: cover;
     position: relative;
+    margin-bottom: 100px;
     &::after {
         content: "";
         position: absolute;
@@ -30,7 +31,6 @@ header {
     }
     h1 {
         width: 60%;
-        border: 1px solid red;
         padding-top:50px;
         
     }

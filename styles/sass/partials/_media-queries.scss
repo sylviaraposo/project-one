@@ -1,0 +1,125 @@
+
+
+@media (max-width: 1000px){
+    // add white space to other-links section
+    .other-links {
+        padding: 75px 0;
+    }
+    // Group Programs section and New locations
+    .group-programs {
+        .flex-container {
+            flex-direction: column;
+            justify-content: center;
+            padding:0;
+        }
+        .img-container {
+            position: relative;
+            top:0;
+
+        }
+        .text-container {
+            width: 100%;
+            padding: 0 40px;
+            right:0;
+            left: 0;
+            position: relative;
+            text-align: center;
+        }
+    }
+    .new-locations {
+        .flex-container {
+            justify-content: center;
+            flex-direction: column-reverse;
+            padding-bottom: 20px;
+        }
+        .img-container {
+            position: relative;
+            margin-top:150px;
+            // top:0;
+            width: 50%;
+
+        }
+        .text-container {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    
+    .new-materials {
+        .flex-container {
+            .new-materials-text {
+                padding: 60px;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 700px){
+    
+    header {
+        margin-bottom: 0px;
+        h1 {
+        font-size: 2.5rem;
+        }
+    }
+
+    .new-materials {
+        .flex-container {
+            flex-direction: column;
+            margin-top:0;
+            .new-materials-text {
+                width: 100%;
+            position: relative;
+            text-align: center;
+                h2 {
+                    padding-top: 10px;
+                }
+            }
+            .img-container {
+                box-shadow: 20px 20px $bright-yellow, -20px 20px $bright-yellow;
+            }
+        }
+    }
+
+    // make other links section full width
+    .other-links {
+        padding-top: 40px;
+        .flex-container {
+        padding:0;
+        .link-container  {
+            flex-direction: column;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            .circle-icon {
+                padding: 15px;
+                text-align: center;
+            }
+            .icon {
+                padding-bottom: 10px;
+                i {
+                    margin:0;
+                }
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+    }
+// Search By Style Section
+    .search-by-style .flex-container {
+        padding: 50px;
+        p {
+            padding-bottom: 40px;
+            text-align: center;
+        }
+    }   
+
+    // shrink banner image to avoid taking up too much space
+    .banner-image {
+        height: 30vh;
+    }
+}

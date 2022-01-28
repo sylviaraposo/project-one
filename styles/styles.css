@@ -9,6 +9,7 @@ button {
   background-color: #065635;
   color: #f5f5f5;
   padding: 10px 25px;
+  margin-top: 10px;
 }
 
 html {
@@ -436,6 +437,7 @@ header {
   height: 100vh;
   background-size: cover;
   position: relative;
+  margin-bottom: 100px;
 }
 header::after {
   content: "";
@@ -460,7 +462,6 @@ header img {
 }
 header h1 {
   width: 60%;
-  border: 1px solid red;
   padding-top: 50px;
 }
 header span {
@@ -495,13 +496,13 @@ img {
 
 .new-materials .flex-container {
   display: flex;
-  margin: 50px 0;
+  padding-top: 60px;
   align-items: center;
   justify-content: space-between;
 }
 .new-materials .flex-container .new-materials-text {
   width: 60%;
-  padding: 40px 0;
+  padding: 100px 0;
 }
 .new-materials .flex-container .img-container {
   box-shadow: -20px 20px #f8fb05;
@@ -545,6 +546,8 @@ img {
 
 .group-programs {
   background-color: #e0fddf;
+  height: 40vh;
+  padding-top: 40px;
 }
 .group-programs .flex-container {
   display: flex;
@@ -552,20 +555,25 @@ img {
   justify-content: space-between;
   align-items: center;
   padding-right: 50px;
+  position: relative;
+  padding-bottom: 50px;
+  height: 100%;
 }
 .group-programs .img-container {
   width: 40%;
-  position: relative;
-  bottom: 50px;
-  box-shadow: 25px 25px #f8fb05;
+  box-shadow: 20px 20px #f8fb05;
+  position: absolute;
+  top: -70px;
 }
 .group-programs .img-container img {
   display: block;
 }
 .group-programs .text-container {
-  width: 40%;
-  padding-right: 150px;
-  margin-right: 60px;
+  width: 35%;
+  bottom: 0;
+  position: absolute;
+  right: 50px;
+  top: 70px;
 }
 
 .new-locations {
@@ -576,21 +584,24 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-left: 50px;
+  position: relative;
+  height: 100%;
+  padding: 50px;
 }
 .new-locations .img-container {
   width: 40%;
-  position: relative;
-  bottom: -50px;
-  box-shadow: 25px 25px #f8fb05;
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  box-shadow: -20px 20px #f8fb05;
 }
 .new-locations .img-container img {
   display: block;
 }
 .new-locations .text-container {
   width: 40%;
-  padding-left: 150px;
-  margin-left: 60px;
+  text-align: right;
+  padding: 100px 0px 50px 30px;
 }
 
 .banner-image {
@@ -643,7 +654,7 @@ img {
   position: relative;
   top: -110px;
   z-index: 5;
-  box-shadow: 25px 25px #f8fb05;
+  box-shadow: 20px 20px #f8fb05;
 }
 .full-content-flex .left-flex .text-container {
   background-color: #f5f5f5;
@@ -715,4 +726,109 @@ footer {
 footer p {
   margin: 0;
   padding: 10px 0;
+}
+
+@media (max-width: 1000px) {
+  .other-links {
+    padding: 75px 0;
+  }
+
+  .group-programs .flex-container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+  .group-programs .img-container {
+    position: relative;
+    top: 0;
+  }
+  .group-programs .text-container {
+    width: 100%;
+    padding: 0 40px;
+    right: 0;
+    left: 0;
+    position: relative;
+    text-align: center;
+  }
+
+  .new-locations .flex-container {
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding-bottom: 20px;
+  }
+  .new-locations .img-container {
+    position: relative;
+    margin-top: 150px;
+    width: 50%;
+  }
+  .new-locations .text-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .new-materials .flex-container .new-materials-text {
+    padding: 60px;
+  }
+}
+@media (max-width: 700px) {
+  header {
+    margin-bottom: 0px;
+  }
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .new-materials .flex-container {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .new-materials .flex-container .new-materials-text {
+    width: 100%;
+    position: relative;
+    text-align: center;
+  }
+  .new-materials .flex-container .new-materials-text h2 {
+    padding-top: 10px;
+  }
+  .new-materials .flex-container .img-container {
+    box-shadow: 20px 20px #f8fb05, -20px 20px #f8fb05;
+  }
+
+  .other-links {
+    padding-top: 40px;
+  }
+  .other-links .flex-container {
+    padding: 0;
+  }
+  .other-links .flex-container .link-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+  }
+  .other-links .flex-container .link-container .circle-icon {
+    padding: 15px;
+    text-align: center;
+  }
+  .other-links .flex-container .link-container .icon {
+    padding-bottom: 10px;
+  }
+  .other-links .flex-container .link-container .icon i {
+    margin: 0;
+  }
+  .other-links .flex-container .link-container p {
+    margin: 0;
+  }
+
+  .search-by-style .flex-container {
+    padding: 50px;
+  }
+  .search-by-style .flex-container p {
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .banner-image {
+    height: 30vh;
+  }
 }
