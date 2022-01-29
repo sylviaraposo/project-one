@@ -198,11 +198,14 @@ img {
             }
         }
         .img-container {
-            box-shadow: 25px 55px $bright-yellow;
+            box-shadow: 20px 55px $bright-yellow;
             // Set as block to remove empty space within img-container
             img {
                 display: block;
             }
+        }
+        .mobile-only-blog-img {
+            display: none;
         }
     } // .left-flex END
 
