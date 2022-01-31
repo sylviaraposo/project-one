@@ -6,7 +6,8 @@
     .nav-bar {
         .drop-down {
             &:hover .nav-menu, 
-            &:focus .nav-menu {
+            &:focus .nav-menu,
+            &:active .nav-menu {
             display: block;
         }
         .nav-icon {
@@ -351,9 +352,9 @@
 
     // BLOG Page MOBILE
     .blog-header {
-        height:40vh;
+        height:50vh;
         ul li {
-        display: none;
+            display: none;
         }
     }
     .full-content-flex {
