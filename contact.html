@@ -19,18 +19,29 @@
 <body>
     <!-- Header Section -->
     <header class='contact-header'>
+
         <!-- Nav Bar -->
-        <nav class="nav-bar">
-            <a href="./index.html">
-                <h2 class='logo'>Sanctuary Helpers</h2>
-            </a>
-            <ul>
-                <li><a href="./index.html">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="./blog.html">BLOG</a></li>
-                <li><a href="./contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
+            <nav class="nav-bar">
+                <a href="./index.html">
+                    <h2 class='logo'>Sanctuary Helpers</h2>
+                </a>
+
+                <!-- Div for mobile drop-down nav -->
+                <div class="drop-down">
+                    <label for="openSidebarMenu">
+                        <i class="fas fa-bars nav-icon"></i>
+                    </label>
+
+                    <ul>
+                        <div class="nav-menu animate__animated animate__fadeInDown"  >
+                            <li><a href="./index.html">HOME</a></li>
+                            <li><a href="#about">ABOUT</a></li>
+                            <li><a href="./blog.html">BLOG</a></li>
+                            <li><a href="./contact.html">CONTACT</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
     
         <!-- Sanctuary Helpers Heading  -->
         <h1 class="animate__animated animate__slideInDown animate__slow">Get in touch</h1>

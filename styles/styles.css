@@ -419,11 +419,15 @@ body {
   align-items: center;
   justify-content: space-around;
 }
+.nav-bar .nav-icon {
+  display: none;
+  font-size: 1.5rem;
+}
 .nav-bar h2 {
   width: 10%;
   padding: 20px 0;
 }
-.nav-bar ul {
+.nav-bar .nav-menu {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -555,10 +559,15 @@ img {
   padding-bottom: 20px;
   align-items: flex-start;
 }
+.other-links .flex-container .link-container a:hover h2, .other-links .flex-container .link-container a:focus h2 {
+  -webkit-text-decoration: underline #f8fb05;
+          text-decoration: underline #f8fb05;
+  text-underline-offset: 12px;
+}
 .other-links .flex-container .link-container a:hover .icon, .other-links .flex-container .link-container a:focus .icon {
   color: #f8fb05;
 }
-.other-links .flex-container .link-container a:hover .circle-icon, .other-links .flex-container .link-container a:focus .circle-icon {
+.other-links .flex-container .link-container a:hover .icon .circle-icon, .other-links .flex-container .link-container a:focus .icon .circle-icon {
   background-color: black;
 }
 .other-links .flex-container .link-container .circle-icon {
@@ -782,8 +791,30 @@ footer p {
 }
 
 @media (max-width: 1100px) {
-  nav ul li {
+  .nav-bar .drop-down:hover .nav-menu, .nav-bar .drop-down:focus .nav-menu {
+    display: block;
+  }
+  .nav-bar .drop-down .nav-icon {
+    display: block;
+    position: relative;
+  }
+  .nav-bar .drop-down {
+    position: relative;
+    display: block;
+  }
+  .nav-bar .nav-menu {
+    position: absolute;
+    top: 30px;
+    right: -20px;
+    background-color: rgba(227, 227, 227, 0.719);
     display: none;
+    text-align: right;
+  }
+  .nav-bar .nav-menu li {
+    padding: 10px 0px;
+  }
+  .nav-bar .nav-menu li a {
+    padding: 20px;
   }
 
   header {
@@ -979,20 +1010,19 @@ footer p {
     padding: 0;
   }
   .other-links .flex-container .link-container {
-    flex-direction: column;
     width: 100%;
     padding: 40px;
-    text-align: center;
   }
-  .other-links .flex-container .link-container .circle-icon {
-    padding: 15px;
+  .other-links .flex-container .link-container a {
+    flex-direction: column;
     text-align: center;
   }
   .other-links .flex-container .link-container .icon {
+    margin: 0 auto;
     padding-bottom: 10px;
   }
-  .other-links .flex-container .link-container .icon i {
-    margin: 0;
+  .other-links .flex-container .link-container .icon .circle-icon {
+    padding: 15px;
   }
   .other-links .flex-container .link-container p {
     margin: 0;

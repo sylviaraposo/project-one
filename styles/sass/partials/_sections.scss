@@ -49,12 +49,16 @@ img {
             padding-bottom:20px;
             align-items: flex-start;
             &:hover, &:focus {
-                .icon {
-                    color: $bright-yellow
+                h2 {
+                    text-decoration: underline $bright-yellow;
+                    text-underline-offset: 12px;
                 }
-                .circle-icon {
+                .icon {
+                    color: $bright-yellow;
+                    .circle-icon {
                     background-color: black; 
-                } 
+                    }
+                }
             } // hover END
         } 
         .circle-icon  {
