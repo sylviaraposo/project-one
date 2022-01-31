@@ -257,6 +257,7 @@ html {
   position: relative;
   top: -150px;
   width: 55%;
+  z-index: 0;
   box-shadow: 20px 20px #f8fb05;
 }
 .contact-form .top-row-contact {
@@ -413,7 +414,7 @@ body {
 .nav-bar {
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 10px;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -423,14 +424,19 @@ body {
   display: none;
   font-size: 1.5rem;
 }
-.nav-bar h2 {
+.nav-bar .logo {
   width: 10%;
-  padding: 20px 0;
+  margin: 0;
+  display: inline-block;
+  padding-top: 2%;
+  padding-left: 5%;
+  vertical-align: middle;
 }
 .nav-bar .nav-menu {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  z-index: 49;
 }
 .nav-bar li {
   padding: 0 20px;
@@ -791,29 +797,35 @@ footer p {
 }
 
 @media (max-width: 1100px) {
+  .nav-bar.header-nav {
+    justify-content: space-between;
+  }
+  .nav-bar .drop-down {
+    position: relative;
+    display: block;
+    padding: 30px;
+    z-index: 12;
+  }
   .nav-bar .drop-down:hover .nav-menu, .nav-bar .drop-down:active .nav-menu {
     display: block;
   }
   .nav-bar .drop-down .nav-icon {
     display: block;
     position: relative;
+    right: 0;
   }
-  .nav-bar .drop-down {
-    position: relative;
-    display: block;
-  }
-  .nav-bar .nav-menu {
+  .nav-bar .drop-down .nav-menu {
     position: absolute;
-    top: 30px;
-    right: -20px;
-    background-color: rgba(227, 227, 227, 0.719);
+    margin-top: 10px;
+    background-color: #f8f9f9;
     display: none;
-    text-align: right;
+    box-shadow: -5px 5px #f8fb05;
+    right: 0;
   }
-  .nav-bar .nav-menu li {
+  .nav-bar .drop-down .nav-menu li {
     padding: 10px 0px;
   }
-  .nav-bar .nav-menu li a {
+  .nav-bar .drop-down .nav-menu li a {
     padding: 20px;
   }
 
@@ -871,10 +883,13 @@ footer p {
     position: relative;
   }
   .new-materials .flex-container {
-    padding-top: 10px;
+    padding-top: 40px;
   }
   .new-materials .flex-container .new-materials-text {
-    padding: 0 15px 60px;
+    padding: 50px 15px 60px;
+  }
+  .new-materials .flex-container .new-materials-text h2 {
+    padding-top: 100px;
   }
 
   .contact-header {
@@ -891,6 +906,8 @@ footer p {
   }
   .contact .flex-container .contact-form {
     width: 100%;
+    top: -50px;
+    margin-bottom: 59px;
   }
   .contact .flex-container .contact-flex {
     text-align: center;
@@ -997,7 +1014,7 @@ footer p {
     text-align: center;
   }
   .new-materials .flex-container .new-materials-text h2 {
-    padding-top: 10px;
+    padding-top: 40px;
   }
   .new-materials .flex-container .img-container {
     box-shadow: 20px 20px #f8fb05, -20px 20px #f8fb05;
@@ -1072,9 +1089,6 @@ footer p {
 
   .blog-header {
     height: 50vh;
-  }
-  .blog-header ul li {
-    display: none;
   }
 
   .full-content-flex .left-flex {
