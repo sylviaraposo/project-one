@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumar+One&family=Kumar+One+Outline&family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
 
+    <!-- ANIMATIONS! -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/a763f0788e.js" crossorigin="anonymous"></script>
 </head>
@@ -18,7 +21,9 @@
     <header class='contact-header'>
         <!-- Nav Bar -->
         <nav class="nav-bar">
-            <h2 class='logo'>Sanctuary Helpers</h2>
+            <a href="./index.html">
+                <h2 class='logo'>Sanctuary Helpers</h2>
+            </a>
             <ul>
                 <li><a href="./index.html">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
@@ -28,7 +33,7 @@
         </nav>
     
         <!-- Sanctuary Helpers Heading  -->
-        <h1>Get in touch</h1>
+        <h1 class="animate__animated animate__slideInDown animate__slow">Get in touch</h1>
     </header><!-- Header END -->
 
     <main>
@@ -36,7 +41,7 @@
             <div class="wrapper flex-container">
 
                 <!-- Contact Form -->
-                <form action="" class="contact-form">
+                <form action="" class="contact-form animate__animated animate__slideInUp animate__slow">
                     <div class="top-row-contact">
                         <label for="name" class="sr-only">Name</label>
                         <input type="text" id="name" placeholder="Name"> 

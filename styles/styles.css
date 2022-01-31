@@ -5,11 +5,18 @@
   margin: 0 auto;
 }
 
-button {
+button, input[type=submit] {
   background-color: #065635;
   color: #f5f5f5;
-  padding: 10px 25px;
+  padding: 13px 20px;
   margin-top: 10px;
+  border: none;
+  transition: all 235ms ease-in-out;
+}
+button:hover, button:focus, input[type=submit]:hover, input[type=submit]:focus {
+  cursor: pointer;
+  transform: translate3d(0, 2px, 0);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 html {
@@ -265,6 +272,7 @@ html {
   font-family: "Lato", sans-serif;
   border-bottom: 2px #065635 solid;
   background-color: transparent;
+  transition: all 200ms ease-in-out;
 }
 .contact-form input::-moz-placeholder {
   font-size: 0.8rem;
@@ -286,6 +294,7 @@ html {
 }
 .contact-form input:focus {
   outline: none;
+  transform: translate3d(0, 2.3px, 0);
   border-bottom: 3.5px #065635 solid;
 }
 .contact-form textarea {
@@ -449,12 +458,14 @@ header::after {
   height: 4rem;
 }
 header .img-container {
-  position: absolute;
+  position: relative;
   height: 55%;
+  width: 60%;
   bottom: 0;
   left: 0;
   z-index: 2;
   box-sizing: content-box;
+  transition: ease width 1.4s;
 }
 header img {
   min-width: 100%;
@@ -537,16 +548,32 @@ img {
   justify-content: space-between;
 }
 .other-links .flex-container .link-container {
+  width: calc((100%/2) - 50px);
+}
+.other-links .flex-container .link-container a {
   display: flex;
-  width: calc((100%/2) - 40px);
   padding-bottom: 20px;
+  align-items: flex-start;
+}
+.other-links .flex-container .link-container a:hover .icon, .other-links .flex-container .link-container a:focus .icon {
+  color: #f8fb05;
+}
+.other-links .flex-container .link-container a:hover .circle-icon, .other-links .flex-container .link-container a:focus .circle-icon {
+  background-color: black;
 }
 .other-links .flex-container .link-container .circle-icon {
   background-color: #f8fb05;
   border-radius: 50%;
-  padding: 8px;
+  text-align: center;
+  padding: 10px;
   margin-top: 5px;
   margin-right: 15px;
+}
+.other-links .flex-container .link-container .circle-icon::before {
+  vertical-align: middle;
+}
+.other-links .flex-container .link-container p {
+  margin-top: 0;
 }
 
 .group-programs {
@@ -563,6 +590,7 @@ img {
   position: relative;
   padding-bottom: 50px;
   height: 100%;
+  z-index: 3;
 }
 .group-programs .img-container {
   width: 40%;
@@ -575,7 +603,9 @@ img {
 }
 .group-programs .text-container {
   width: 35%;
+  padding: 20px 20px 200px 0px;
   bottom: 0;
+  margin-right: 2%;
   position: absolute;
   right: 50px;
   top: 70px;
@@ -606,7 +636,7 @@ img {
 .new-locations .text-container {
   width: 40%;
   text-align: right;
-  padding: 100px 0px 50px 30px;
+  padding: 100px 0px 50px 100px;
 }
 
 .banner-image {
@@ -661,9 +691,9 @@ img {
   align-items: center;
 }
 .full-content-flex .left-flex {
-  width: 55%;
+  width: 60%;
   position: relative;
-  top: -110px;
+  top: -130px;
   z-index: 5;
   box-shadow: 20px 20px #f8fb05;
 }
@@ -690,7 +720,9 @@ img {
   display: none;
 }
 .full-content-flex .right-flex {
-  width: 20%;
+  position: relative;
+  top: -130px;
+  width: 28%;
   background-color: #f8fb05;
   box-shadow: -30px 12px 0px -12px #f8fb05;
 }
@@ -700,6 +732,13 @@ img {
 }
 .full-content-flex .right-flex .text-container ul {
   list-style: inside;
+}
+.full-content-flex .right-flex .text-container ul a:hover, .full-content-flex .right-flex .text-container ul a:focus {
+  font-weight: bold;
+  cursor: pointer;
+}
+.full-content-flex .right-flex .img-container img {
+  width: 100%;
 }
 
 .comments {
@@ -742,7 +781,21 @@ footer p {
   padding: 10px 0;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
+  nav ul li {
+    display: none;
+  }
+
+  header {
+    height: 80vh;
+  }
+  header h1 {
+    margin-left: 5%;
+  }
+  header .img-container {
+    height: 30%;
+  }
+
   .other-links {
     padding: 75px 0;
   }
@@ -781,10 +834,21 @@ footer p {
     padding-left: 0;
   }
 
+  .new-materials {
+    padding-top: -150px;
+    z-index: 3;
+    position: relative;
+  }
+  .new-materials .flex-container {
+    padding-top: 10px;
+  }
   .new-materials .flex-container .new-materials-text {
-    padding: 60px;
+    padding: 0 15px 60px;
   }
 
+  .contact-header {
+    height: 50vh;
+  }
   .contact-header h1 {
     text-align: center;
     margin: 0 auto;
@@ -856,21 +920,18 @@ footer p {
   .full-content-flex .right-flex {
     width: 50%;
     margin: 0 auto;
+    margin-top: 250px;
     box-shadow: none;
     padding: 10px;
-    text-align: center;
   }
   .full-content-flex .right-flex .img-container {
     width: 40%;
     margin: 0 auto;
   }
-  .full-content-flex .right-flex .text-container {
-    padding-bottom: 20px;
+  .full-content-flex .right-flex .text-container h2, .full-content-flex .right-flex .text-container p {
+    text-align: center;
   }
 
-  .comments {
-    padding-top: 50px;
-  }
   .comments .comment-display {
     margin-top: 50px;
     display: inline-block;
@@ -882,7 +943,10 @@ footer p {
     margin-bottom: 0px;
   }
   header h1 {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
+  }
+  header .img-container {
+    width: 88%;
   }
 
   .contact-header h1 {
@@ -976,6 +1040,9 @@ footer p {
     padding-top: 50px;
   }
 
+  .blog-header {
+    height: 40vh;
+  }
   .blog-header ul li {
     display: none;
   }

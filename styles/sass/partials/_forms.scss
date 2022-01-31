@@ -20,6 +20,7 @@
         font-family:$secondary-font;
         border-bottom: 2px $evergreen solid;
         background-color: transparent;
+        transition: all 200ms ease-in-out;
 
         &::placeholder {
             font-size: 0.8rem;
@@ -29,6 +30,7 @@
         }
         &:focus {
             outline:none;
+            transform: translate3d(0, 2.3px, 0);
             border-bottom: 3.5px $evergreen solid;
         }
     }

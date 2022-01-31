@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumar+One&family=Kumar+One+Outline&family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
 
+    <!-- ANIMATIONS! -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/a763f0788e.js" crossorigin="anonymous"></script>
 </head>
@@ -18,7 +21,9 @@
     <header class='blog-header'>
         <!-- Nav Bar -->
         <nav class="nav-bar">
-            <h2 class='logo'>Sanctuary Helpers</h2>
+            <a href="./index.html">
+                <h2 class='logo'>Sanctuary Helpers</h2>
+            </a>
             <ul>
                 <li><a href="./index.html">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
@@ -35,7 +40,7 @@
     <!-- Blog Content -->
     <main id="blog">
         <div class="full-content-flex">
-            <div class="left-flex">
+            <div class="left-flex animate__animated animate__slideInLeft animate__slow">
                 <div class="img-container">
                     <img src="./assets/blog-post-image.jpg" alt="a blue and white couch">
                 </div>
@@ -55,7 +60,7 @@
                 </div><!-- .text-container END -->
             </div><!-- .left-flex END -->
 
-            <div class="right-flex">
+            <div class="right-flex animate__animated animate__slideInRight animate__slow">
                 <div class="img-container">
                     <img src="./assets/sidebar-image.jpg" alt="orange ceiling lamp">
                 </div>
@@ -64,10 +69,18 @@
                     <p>Lorem, ipsum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit.</p>
                     <h2>Recent Posts</h2>
                     <ul>
-                        <li>Lorem ipsum dolor sit</li>
-                        <li>Lorem ipsum dolor sit amet</li>
-                        <li>Sit amet ipsum dolor</li>
-                        <li>Dolor amet lorem ipsum amet</li>
+                        <li>
+                            <a href="">Lorem ipsum dolor sit</a>
+                        </li>
+                        <li>
+                            <a href="">Lorem ipsum dolor sit amet</a>
+                        </li>
+                        <li>
+                            <a href="">Sit amet ipsum dolor</a>
+                        </li>
+                        <li>
+                            <a href="">Dolor amet lorem ipsum amet</a>
+                        </li>
                     </ul>
                 </div><!-- .text-container END-->
             </div><!-- .right-flex END -->

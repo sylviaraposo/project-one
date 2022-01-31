@@ -4,9 +4,16 @@
     margin: 0 auto;
 }
 
-button {
+button,input[type="submit"] {
     background-color: $evergreen;
     color:$solid-white;
-    padding: 10px 25px;
+    padding: 13px 20px;
     margin-top:10px;
+    border:none;
+    transition: all 235ms ease-in-out;
+    &:hover, &:focus {
+        cursor: pointer;
+        transform: translate3d(0, 2px, 0);
+        box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+    }
 }

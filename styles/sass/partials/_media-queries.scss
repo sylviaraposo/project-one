@@ -1,6 +1,23 @@
 
 
-@media (max-width: 1000px){
+@media (max-width: 1100px){
+    // List items on nav
+    nav ul li {
+        display: none;
+    }
+
+    // HEADER Section
+    header {
+        height:80vh;
+        h1 {
+            margin-left: 5%;
+        }
+        .img-container {
+                height: 30%;
+            }
+    }
+
+    
     // add white space to other-links section
     .other-links {
         padding: 75px 0;
@@ -45,17 +62,23 @@
     }
 
     
-    .new-materials {
+    .new-materials {        
+        padding-top: -150px;
+        z-index: 3;
+        position: relative;
         .flex-container {
+            padding-top:10px;
             .new-materials-text {
-                padding: 60px;
+                padding: 0 15px 60px;
             }
+            
         }
     }
 
 
     // CONTACT PAGE MEDIA QUERIES
     .contact-header {
+        height: 50vh;
         h1 {
             text-align: center;
             margin: 0 auto;
@@ -90,7 +113,6 @@
     // Add blur at smaller screens between header and body content for less harsh transition
     .blog-header
         {
-            // margin-bottom: 100px;
             &::after {
             
             content: "";
@@ -145,16 +167,17 @@
         .right-flex {
             width:50%;
             margin: 0 auto;
+            margin-top: 250px;
             box-shadow: none;
             padding: 10px;
-            text-align: center;
             .img-container {
                 width: 40%;
                 margin: 0 auto;
             }
             .text-container {
-                padding-bottom: 20px;
-
+                h2, p {
+                    text-align: center;
+                }
             }
         } // .right-flex END  
     } // .full-contact-flex END
@@ -162,7 +185,6 @@
     // Comments Section 
     
     .comments {
-        padding-top:50px;
         .comment-display {
             margin-top:50px;
             display: inline-block;
@@ -177,7 +199,11 @@
     header {
         margin-bottom: 0px;
         h1 {
-        font-size: 2.3rem;
+            font-size: 2.2rem;
+            // padding-bottom: 40px;
+        }
+        .img-container {
+            width:88%;
         }
     }
 
@@ -292,8 +318,11 @@
 
 
     // BLOG Page MOBILE
-    .blog-header ul li {
+    .blog-header {
+        height:40vh;
+        ul li {
         display: none;
+        }
     }
     .full-content-flex {
         .left-flex {

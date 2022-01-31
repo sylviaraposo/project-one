@@ -19,12 +19,14 @@ header {
         height: 4rem;
     }
     .img-container {
-        position: absolute;
+        position: relative;
         height: 55%;
+        width: 60%;
         bottom:0;
         left:0;
         z-index: 2;
         box-sizing: content-box;
+        transition: ease width 1.4s;
     }
     img {
         min-width: 100%;
