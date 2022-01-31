@@ -6,7 +6,6 @@
     .nav-bar {
         .drop-down {
             &:hover .nav-menu, 
-            &:focus .nav-menu,
             &:active .nav-menu {
             display: block;
         }

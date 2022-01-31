@@ -791,7 +791,7 @@ footer p {
 }
 
 @media (max-width: 1100px) {
-  .nav-bar .drop-down:hover .nav-menu, .nav-bar .drop-down:focus .nav-menu, .nav-bar .drop-down:active .nav-menu {
+  .nav-bar .drop-down:hover .nav-menu, .nav-bar .drop-down:active .nav-menu {
     display: block;
   }
   .nav-bar .drop-down .nav-icon {
