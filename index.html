@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanctuary Helpers</title>
+
     
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,12 +73,17 @@
         <!-- Gallery Section -->
         <section class="gallery">
             <div class="wrapper">
-                <div class="flex-container">
+                <div class="flex-container"> 
                     <ul>
-                        <li><img src="./assets/gallery-image-1.jpg" alt="a green dresser with a vase"></li>
-                        <li><img src="./assets/gallery-image-2.jpg" alt="a leather couch with pillows and a coffee table with scattered magazines"></li>
-                        <li><img src="./assets/gallery-image-3.jpg" alt="a wire hammock chair"></li>
+                            <li><img src="./assets/gallery-image-1.jpg" alt="a green dresser with a vase" class="image"></li>
+                        
+                            <li><img src="./assets/gallery-image-2.jpg" alt="a leather couch with pillows and a coffee table with scattered magazines" class="image"></li>
+                        
+                            <li><img src="./assets/gallery-image-3.jpg" alt="a wire hammock chair" class="image"></li>
+                        
                     </ul>
+                    
+                        <button class="close">Close Image</button>
                 </div>
             </div>
         </section><!-- .gallery END -->
@@ -186,5 +192,41 @@
     <footer>
         <p>Copyright © 2022 Juno College</p>
     </footer>
+
+    
+    <!-- Connect to JS sheet -->
+    <script src="./script.js">
+
+        // I know this doesn't work :( 
+        
+        imageEl = document.getElementsByClassName('image')
+        buttonEl = document.querySelector('.close')
+        console.log(buttonEl)
+
+        for(let i = 0; i < imageEl.length; i++){
+            
+            imageEl[i].addEventListener('click', function(){
+                imageEl[i].style.width = '120%';     
+                imageEl[i].style.height = "auto";
+                
+                imageEl[i].style.zIndex = 200;
+                imageEl[i].style.transition = "width 0.5s ease";
+                buttonEl.style.display = 'block';
+
+            })
+
+            buttonEl.addEventListener('click', function(){
+                imageEl[i].style.width = '100%';     
+                imageEl[i].style.height = "auto";
+                
+                imageEl[i].style.transition = "width 0.5s ease";
+                buttonEl.style.display = 'none';
+
+            })
+            
+        }
+
+
+    </script>
 </body>
 </html>

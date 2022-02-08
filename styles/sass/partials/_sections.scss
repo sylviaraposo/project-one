@@ -32,8 +32,25 @@ img {
         justify-content: space-between;
         li {
             width: calc((100% / 3) - 30px);
+            img {
+                position: relative;
+            }
         }
     }
+    .flex-container {
+        position: relative;
+        padding-bottom: 40px;
+    }
+    .close {
+        display: none;
+        margin: 0 auto;
+        text-align: center;
+        padding:20px 30px;
+        // margin-bottom: 40px;
+        position: relative;
+        bottom: -40%;
+    }
+    
 }
 
 // Links Section

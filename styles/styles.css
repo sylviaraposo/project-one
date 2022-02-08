@@ -550,6 +550,21 @@ img {
 .gallery ul li {
   width: calc((100% / 3) - 30px);
 }
+.gallery ul li img {
+  position: relative;
+}
+.gallery .flex-container {
+  position: relative;
+  padding-bottom: 40px;
+}
+.gallery .close {
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 30px;
+  position: relative;
+  bottom: -40%;
+}
 
 .other-links .flex-container {
   display: flex;
@@ -805,9 +820,6 @@ footer p {
     display: block;
     padding: 30px;
     z-index: 12;
-  }
-  .nav-bar .drop-down:hover .nav-menu, .nav-bar .drop-down:active .nav-menu {
-    display: block;
   }
   .nav-bar .drop-down .nav-icon {
     display: block;
