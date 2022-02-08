@@ -9,7 +9,7 @@ dropDownEl.addEventListener('click', function() {
         navMenuEl.classList.add('animate__fadeOutUp')
     } else {
         navMenuEl.style.display = 'block'
-    }
+    } 
 })
 
 
