@@ -549,9 +549,13 @@ img {
 }
 .gallery ul li {
   width: calc((100% / 3) - 30px);
+  display: none;
 }
 .gallery ul li img {
   position: relative;
+}
+.gallery ul .first-img {
+  display: block;
 }
 .gallery .flex-container {
   position: relative;
@@ -564,6 +568,10 @@ img {
   padding: 20px 30px;
   position: relative;
   bottom: -40%;
+}
+.gallery .next, .gallery .prev {
+  height: 50px;
+  align-self: center;
 }
 
 .other-links .flex-container {

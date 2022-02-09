@@ -75,12 +75,15 @@
             <div class="wrapper">
                 <div class="flex-container"> 
                     <ul>
-                            <li><img src="./assets/gallery-image-1.jpg" alt="a green dresser with a vase" class="image"></li>
                         
+                        <button class="prev">prev</button>
+                            <li class="first-img"><img src="./assets/gallery-image-1.jpg" alt="a green dresser with a vase" class="image"></li>
+                            <li class="center-img"></li>
                             <li><img src="./assets/gallery-image-2.jpg" alt="a leather couch with pillows and a coffee table with scattered magazines" class="image"></li>
                         
                             <li><img src="./assets/gallery-image-3.jpg" alt="a wire hammock chair" class="image"></li>
                         
+                        <button class="next">next</button>
                     </ul>
                     
                         <button class="close">Close Image</button>
@@ -195,38 +198,7 @@
 
     
     <!-- Connect to JS sheet -->
-    <script src="./script.js">
+    <script src="./script.js"></script>
 
-        // I know this doesn't work :( 
-        
-        imageEl = document.getElementsByClassName('image')
-        buttonEl = document.querySelector('.close')
-        console.log(buttonEl)
-
-        for(let i = 0; i < imageEl.length; i++){
-            
-            imageEl[i].addEventListener('click', function(){
-                imageEl[i].style.width = '120%';     
-                imageEl[i].style.height = "auto";
-                
-                imageEl[i].style.zIndex = 200;
-                imageEl[i].style.transition = "width 0.5s ease";
-                buttonEl.style.display = 'block';
-
-            })
-
-            buttonEl.addEventListener('click', function(){
-                imageEl[i].style.width = '100%';     
-                imageEl[i].style.height = "auto";
-                
-                imageEl[i].style.transition = "width 0.5s ease";
-                buttonEl.style.display = 'none';
-
-            })
-            
-        }
-
-
-    </script>
 </body>
 </html>

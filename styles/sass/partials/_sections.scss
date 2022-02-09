@@ -32,9 +32,16 @@ img {
         justify-content: space-between;
         li {
             width: calc((100% / 3) - 30px);
+            display: none;
             img {
                 position: relative;
             }
+        }
+        .center-img {
+            // display:block;
+        }
+        .first-img {
+            display: block;
         }
     }
     .flex-container {
@@ -49,6 +56,11 @@ img {
         // margin-bottom: 40px;
         position: relative;
         bottom: -40%;
+    }
+    .next, .prev {
+        height:50px;
+        align-self: center;
+        // padding: 60px 0;
     }
     
 }
